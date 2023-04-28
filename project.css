@@ -1,0 +1,115 @@
+.status-table {
+  border: 1px solid #ddd;
+  width: auto;
+  border-radius: 0.5rem;
+  margin: 3rem;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.status-graph {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.status-graph:last-child {
+  border: none;
+}
+
+.status-graph-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.complete {
+  color: #16803c;
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #cbebd3;
+  border-radius: 0.5rem;
+  background-color: #effdf4;
+  margin-left: 0.8rem;
+}
+
+.in-progress {
+  color: #999;
+  border: 1px solid #999;
+  background-color: #eee;
+}
+
+.archived {
+  color: #844d0f;
+  border: 1px solid #f4e5c1;
+  background-color: #fefce8;
+}
+
+.left-btm {
+  width: fit-content;
+  height: auto;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.status-graph-right {
+  display: flex;
+  align-items: center;
+}
+
+.status-graph-right button {
+  background-color: #fff;
+  font-size: 1rem;
+  padding: 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f3f3f3;
+}
+
+.status-graph-right span {
+  font-weight: 300;
+  color: #999;
+  cursor: pointer;
+  position: relative;
+}
+
+.status-graph-right span:hover {
+  color: #666;
+}
+
+.status-graph-right menu {
+  background-color: #fff;
+  position: absolute;
+  right: 100px;
+  bottom: -600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem 5rem 1rem 0.5rem;
+  box-shadow: 0 0.5px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+
+.status-graph-right menu a {
+  text-decoration: none;
+  color: #777;
+}
+
+
