@@ -177,9 +177,7 @@ h3 {
 }
 
 @media (max-width: 786px) {
-  .header-right ul {
-    display: none
-  }
+  
   .size-box {
     flex-direction: column;
   }
