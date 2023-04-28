@@ -381,7 +381,7 @@ select {
 }
 
 .header-right-icon ul{
-  display: none;
+ 
 }
 
 .header-menu{
@@ -467,17 +467,11 @@ display: none;
   }
 }
 
-@media (max-width: 768px) {
-  .header-right-menu ul {
-    display: none
-  }
-  .header-right-icon{
-    display: flex
-  }
+@media (max-width: 786px) {
+ 
+ 
 
-.header-right-icon{
-  display: flex;
-}
+
 
  
 }
