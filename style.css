@@ -29,8 +29,10 @@ body {
 }
 
 .header-left img {
+
   width: 120px;
   height: auto;
+  cursor: pointer;
 }
 
 .header-right {
@@ -114,9 +116,9 @@ body {
 }
 
 .status-table {
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   width: auto;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   margin: 3rem;
   padding: 4rem 3rem;
   display: flex;
@@ -436,6 +438,11 @@ select {
     padding: 2rem 2rem;
   }
 
+  .status-table {
+    margin: 2rem;
+    padding: 4rem 1rem;
+  }
+
   .section-contact {
     padding-left: 0;
   }
@@ -506,7 +513,7 @@ select {
     gap: 2rem;
   }
 
-  .status-graph-left span{
+  .status-graph-left span {
     display: none;
   }
 }

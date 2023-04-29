@@ -23,8 +23,8 @@ h3 {
   display: flex;
   justify-content: space-between;
   background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 16px;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
   margin: 3rem;
   padding: 4rem 2rem;
 }
@@ -113,6 +113,12 @@ h3 {
   gap: 0.8rem;
   padding: 1rem;
   border-radius: 0.5rem;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+.size-left:hover,
+.size-left:active {
+  border: 3px solid #4f45e4;
 }
 .size-left p {
   font-size: 0.8rem;
@@ -131,7 +137,14 @@ h3 {
   border: none;
   border-radius: 8px;
   font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
+.left-container-bottom button:hover,
+.left-container-bottom button:active {
+  background-color: #3e35b9;
+}
+
 .shield {
   display: flex;
   align-items: center;
@@ -177,13 +190,15 @@ h3 {
 }
 
 @media (max-width: 786px) {
-  
+  .hero{
+    padding: 2rem;
+  }
   .size-box {
     flex-direction: column;
   }
   .container {
     padding: 4rem 1rem;
-    margin: 1rem;
+    margin: 2rem;
   }
 
   .left-container-head h3 {
