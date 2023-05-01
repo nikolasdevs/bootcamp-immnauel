@@ -19,6 +19,7 @@ h3 {
 }
 
 .container {
+  width: auto;
   column-gap: 3rem;
   display: flex;
   justify-content: space-between;
@@ -103,10 +104,9 @@ h3 {
 .size-box {
   display: flex;
   gap: 1rem;
-  padding-bottom: 0.5rem;
 }
 
-.size-left {
+.sizes {
   border: 2px solid #ccc;
   display: flex;
   flex-direction: column;
@@ -116,11 +116,10 @@ h3 {
   cursor: pointer;
   transition: border 0.3s;
 }
-.size-left:hover,
-.size-left:active {
-  border: 3px solid #4f45e4;
+.sizes:hover {
+  border: 2px solid #4f45e4;
 }
-.size-left p {
+.sizes p {
   font-size: 0.8rem;
 }
 
@@ -141,7 +140,7 @@ h3 {
   transition: background-color 0.3s;
 }
 .left-container-bottom button:hover,
-.left-container-bottom button:active {
+.left-container-bottom button:focus {
   background-color: #3e35b9;
 }
 
@@ -190,7 +189,7 @@ h3 {
 }
 
 @media (max-width: 786px) {
-  .hero{
+  .hero {
     padding: 2rem;
   }
   .size-box {

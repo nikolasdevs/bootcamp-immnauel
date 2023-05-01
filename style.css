@@ -8,6 +8,11 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .header {
   width: 100%;
   height: auto;
@@ -29,13 +34,9 @@ body {
 }
 
 .header-left img {
-
   width: 120px;
   height: auto;
   cursor: pointer;
-}
-
-.header-right {
 }
 
 .header-right-menu ul {
@@ -62,6 +63,7 @@ body {
 .hero {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
   padding: 3rem 6rem;
   background: #d0e2f9;
@@ -228,111 +230,117 @@ button:hover {
   text-decoration: none;
   color: #777;
 }
-
-.section-contact {
+.contact {
   display: flex;
+  align-items: center;
   justify-content: center;
+  background-color: #eee;
+}
+.section-contact {
+  width: 100%;
+  display: flex;
   align-items: center;
   gap: 4rem;
-  width: 100%;
-  padding-left: 3rem;
-  background: #d0e2f9;
-}
-
-.section-contact img {
-  width: 30%;
-  padding: 4rem;
+  background-color: #fff;
 }
 
 .form-group {
-  padding: 2rem 0;
+  width: 50%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  border-radius: 1rem;
+  margin-left: 6rem;
+  padding: 4rem 0;
+}
+
+.form-group p {
+  color: #777;
+  font-weight: 600;
 }
 .form-group button {
   background-color: #fff;
   border: none;
-  padding: 0.6rem 2rem;
-  border-radius: 0.2rem;
+  padding: 1rem 3rem;
+  border: 2px solid #ddd;
+  border-radius: 0.5rem;
   font-weight: 600;
   cursor: pointer;
-  transition: color 0.3s, background 0.5s, box-shadow 0.3s;
+  overflow: hidden;
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s, border 0.3s;
 }
 
 .form-group button:hover {
+  border: none;
   color: #fff;
-  background: #666;
+  background-color: #666;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.form-group p {
-  font-weight: 600;
-}
-
 .form {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.form p {
-  color: #e3e5fa;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
-.form input {
-  padding: 10px 100px 10px 8px;
+.form input,
+.text-area {
+  width: auto;
+  font-family: "inter", serif;
+  padding: 2rem 1rem;
   margin-bottom: 16px;
-  border: none;
-  border-radius: 4px;
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
   outline: none;
   transition: border 0.3s ease;
 }
 
-.form input::placeholder {
+.form input::placeholder,
+.text-area::placeholder {
   font-size: 12px;
 }
 
-.form input:hover {
+.form input:hover,
+.text-area:hover,
+.form input:focus,
+.text-area:focus {
   border: 1px solid #aaa;
 }
 
-.text-area {
-  width: auto;
-  padding: 0.8rem 0.8rem;
-  font-family: "inter", serif;
-  font-size: 12px;
-  outline: none;
-  border: none;
+.contact-right {
+  width: 50%;
+  margin-right: 6rem;
+  padding: 8rem 0;
 }
 
-select {
-  padding: 8px 170px 8px 8px;
-  border: none;
-  border-radius: 4px;
+.contact-right img {
+  width: 100%;
 }
 
 .footer {
+  padding: 4rem;
+  background-color: #0f71f2;
+}
+
+.footer-main {
   display: flex;
   justify-content: space-between;
-  padding: 4rem 6rem;
-  background-color: #0f71f2;
+  display: flex;
 }
 
 .item {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  font-size: 14px;
+  gap: 0.5rem;
+  font-size: 12px;
   color: #e3e5fa;
 }
 
 .footer .item .head {
   font-weight: 600;
   flex-direction: column;
-  gap: 16px;
   padding-bottom: 8px;
 }
 
@@ -342,6 +350,7 @@ select {
   gap: 0.8rem;
 }
 .subscribe input {
+  width: fit-content;
   padding: 0.6rem 8rem 0.6rem 0.8rem;
   border-radius: 0.2rem;
   border: none;
@@ -420,8 +429,25 @@ select {
   .status-graph-right button {
     display: none;
   }
+
+  .form-group {
+    width: 100%;
+    margin: 0 3rem;
+  }
+
+  .section-contact {
+    padding-left: 0;
+  }
+  .contact-right {
+    display: none;
+  }
+
   .footer {
-    padding: 2rem 3rem;
+    padding: 2rem;
+  }
+
+  .footer-main {
+    gap: 2rem;
   }
 }
 
@@ -443,18 +469,15 @@ select {
     padding: 4rem 1rem;
   }
 
-  .section-contact {
-    padding-left: 0;
-  }
-
-  .section-contact img {
-    display: none;
+  .form-group {
+    padding: 2rem 0;
   }
   .item {
     display: none;
   }
 
   .footer-media {
+    font-size: 12px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -495,6 +518,7 @@ select {
   .header-menu {
     display: flex;
     color: #e3e5fa;
+    font-size: 3rem;
   }
 
   .hero {
@@ -515,5 +539,19 @@ select {
 
   .status-graph-left span {
     display: none;
+  }
+  .form-group {
+    width: 100%;
+    margin: 0 1rem;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+  .footer {
+    margin-top: 4rem;
+  }
+
+  .subscribe {
+    flex-direction: column;
+    align-items: start;
   }
 }
